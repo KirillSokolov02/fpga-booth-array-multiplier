@@ -104,16 +104,16 @@ Operand B (8-bit) ──► b_ext (extended: "00" + B + "0")
                     ▼
 ┌──────────────────────────────────────────────────┐
 │  Booth Array (no_of_rows × no_of_slices_per_row) │
-│                                                   │
+│                                                  │ 
 │  Row 0: Booth encode B[1:0], process A[7:0]      │
 │  Row 1: Booth encode B[3:2], process A[7:0]      │
-│  ...                                              │
-│  Row N: Final accumulation                        │
-│                                                   │
-│  Each row:                                        │
-│    ├─ bd_mult_slice × no_of_slices_per_row        │
-│    ├─ Carry4 chain (horizontal)                   │
-│    └─ LUT6-2 array (vertical per slice)           │
+│  ...                                             │
+│  Row N: Final accumulation                       │ 
+│                                                  │ 
+│  Each row:                                       │ 
+│    ├─ bd_mult_slice × no_of_slices_per_row       │ 
+│    ├─ Carry4 chain (horizontal)                  │ 
+│    └─ LUT6-2 array (vertical per slice)          │ 
 └──────────────────────────────────────────────────┘
                     │
                     ▼
